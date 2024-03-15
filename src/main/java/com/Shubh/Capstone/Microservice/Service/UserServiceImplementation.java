@@ -7,6 +7,7 @@ import com.Shubh.Capstone.Microservice.Payload.UserRequest;
 import com.Shubh.Capstone.Microservice.Payload.UserResponse;
 import com.Shubh.Capstone.Microservice.Repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ public class UserServiceImplementation implements UserService {
    UserRepo userRepo;
 
     @Override
-    public User addUser(UserRequest userRequest) {
+    public UserResponse addUser(UserRequest userRequest) {
         User use=new User();
         use.setUser_Name(userRequest.getUser_Name());
         use.setUser_Email(userRequest.getUser_Email());
@@ -36,17 +37,18 @@ public class UserServiceImplementation implements UserService {
             }
         }
         use.setAddress(addresses);
+        userRepo.save(use);
 
-        return userRepo.save(use);
+        return new UserResponse(HttpStatus.CREATED,"User Created Successfully");
     }
 
     @Override
     public UserResponse deleteUserById(Long id) {
         Optional<User> user=userRepo.findById(id);
         if(user.isEmpty())
-            return new UserResponse("FAILED", "User to be deleted not found in System");
+            return new UserResponse(HttpStatus.NOT_FOUND, "User to be deleted not found in System");
         userRepo.deleteById(id);
-        return  new UserResponse("SUCCESS","User Deleted");
+        return  new UserResponse(HttpStatus.OK,"User Deleted");
 
     }
 
@@ -56,9 +58,9 @@ public class UserServiceImplementation implements UserService {
     public UserResponse updateUser(Long id, User user) {
         Optional<User> use=userRepo.findById(id);
         if(use.isEmpty())
-            return new UserResponse("FAILED", "User with this ID is not present in system");
+            return new UserResponse(HttpStatus.NOT_FOUND, "User with this ID is not present in system");
         User updatedUser = userRepo.save(user);
-        return new UserResponse("SUCCESS","User Updated-"+ updatedUser.getUser_Name());
+        return new UserResponse(HttpStatus.OK,"User Updated-"+ updatedUser.getUser_Name());
 
     }
 

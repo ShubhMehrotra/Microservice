@@ -2,10 +2,16 @@ package com.Shubh.Capstone.Microservice.Payload;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.springframework.http.HttpStatus;
 
 @Data
-@AllArgsConstructor
+
 public class UserResponse {
-    private String status;
+    private HttpStatus status;
     private String message;
+
+    public UserResponse(HttpStatus status, String message) {
+        this.status = status;
+        this.message = message;
+    }
 }
