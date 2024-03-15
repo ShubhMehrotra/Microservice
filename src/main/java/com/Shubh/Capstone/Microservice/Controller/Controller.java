@@ -26,5 +26,12 @@ public class Controller {
                         .body(response)).
                 orElseGet(() -> ResponseEntity.status(HttpStatus.BAD_REQUEST)
                         .body(new UserResponse(HttpStatus.BAD_REQUEST,"User Failed to get ADDED")));
+    }
+    @DeleteMapping("/deleteUser/{id}")
+    public ResponseEntity<UserResponse> deleteUser(@PathVariable  Long id){
+        Optional<UserResponse> userResponse = Optional.ofNullable(userService.deleteUserById(id));
+        return userResponse.map(response -> ResponseEntity.status(HttpStatus.OK).body(response))
+                .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).
+                        body(new UserResponse(HttpStatus.NOT_FOUND, "User not found or failed to delete")));
 }
 }
