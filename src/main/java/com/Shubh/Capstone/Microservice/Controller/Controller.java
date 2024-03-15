@@ -2,6 +2,7 @@ package com.Shubh.Capstone.Microservice.Controller;
 
 
 import com.Shubh.Capstone.Microservice.Beans.User;
+import com.Shubh.Capstone.Microservice.Payload.UserRequest;
 import com.Shubh.Capstone.Microservice.Service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,13 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/Index")
 public class Controller {
-   @Autowired
+    @Autowired
     private UserService userService;
 
     @PostMapping("/addUser")
-    ResponseEntity<User> addUser(@RequestBody @Valid User user)
+    ResponseEntity<User> addUser(@RequestBody @Valid UserRequest userRequest)
     {
-        var userResponse=userService.addUser(user);
+        var userResponse=userService.addUser(userRequest);
         return ResponseEntity.status(HttpStatus.CREATED).body(userResponse);
     }
 

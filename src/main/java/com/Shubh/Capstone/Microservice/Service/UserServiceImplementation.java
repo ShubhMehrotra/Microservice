@@ -1,12 +1,15 @@
 package com.Shubh.Capstone.Microservice.Service;
 
+import com.Shubh.Capstone.Microservice.Beans.Address;
 import com.Shubh.Capstone.Microservice.Beans.User;
 import com.Shubh.Capstone.Microservice.Exception.UserNotFoundException;
+import com.Shubh.Capstone.Microservice.Payload.UserRequest;
 import com.Shubh.Capstone.Microservice.Payload.UserResponse;
 import com.Shubh.Capstone.Microservice.Repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,12 +20,28 @@ public class UserServiceImplementation implements UserService {
    UserRepo userRepo;
 
     @Override
-    public User addUser(User user) {
-        return userRepo.save(user);
+    public User addUser(UserRequest userRequest) {
+        User use=new User();
+        use.setUser_Name(userRequest.getUser_Name());
+        use.setUser_Email(userRequest.getUser_Email());
+        List<Address> addresses = new ArrayList<>();
+        if (userRequest.getAddresses() != null) {
+            for (Address addressRequest : userRequest.getAddresses()) {
+                Address address = new Address();
+                address.setDoor_No(addressRequest.getDoor_No());
+                address.setStreet_Name(addressRequest.getStreet_Name());
+                address.setCity(addressRequest.getCity());
+                address.setPin_Code(addressRequest.getPin_Code());
+                addresses.add(address);
+            }
+        }
+        use.setAddress(addresses);
+
+        return userRepo.save(use);
     }
 
     @Override
-    public UserResponse deleteUser(Long id) {
+    public UserResponse deleteUserById(Long id) {
         Optional<User> user=userRepo.findById(id);
         if(user.isEmpty())
             return new UserResponse("FAILED", "User to be deleted not found in System");
@@ -57,6 +76,19 @@ public class UserServiceImplementation implements UserService {
                 .findById(id)
                 .orElseThrow(()->  new UserNotFoundException("User not found for this id-" + id));
     }
+
+//    public void addAddressToUser(Long userId, Address address) {
+//        Optional<User> userOptional = userRepo.findById(userId);
+//        if (userOptional.isPresent()) {
+//            User user = userOptional.get();
+//            address.setUser(user);
+//            user.getAddress().add(address);
+//            userRepo.save(user);
+//        } else {
+//            throw new UserNotFoundException  ("User with ID " + userId + " not found.");
+//        }
+//    }
+
 }
 
 
