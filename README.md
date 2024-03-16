@@ -29,6 +29,34 @@ This Application is simply demonstrating the one to many realtionship between th
 ## This is the ER diagram 
 
 
+## Payload
+
+You can refer the following payload 
+
+{
+
+  "user_Name":"Shubh Mehrotra",
+  "user_Email":"User@gmail.com",
+  "addresses":[
+    {
+      "door_No":"345",
+      "street_Name":"New Blackwood",
+      "city":"LiverPool",
+      "pin_Code":"34567"
+    },
+    {
+      "door_No":"456",
+      "street_Name":"Lombok Street",
+      "city":"Manchester",
+      "pin_Code":"88888"
+    }
+
+
+
+  ]
+
+
+}
 
 
 
