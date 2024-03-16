@@ -18,5 +18,5 @@ public class UserRequest {
     @NotEmpty(message ="Email cannot be Empty ")
     private String user_Email;
     @NotEmpty
-    private List<Address> addresses;
+    private List<AddressRequest> addressRequests;
 }

@@ -2,6 +2,7 @@ package com.Shubh.Capstone.Microservice.Controller;
 
 
 import com.Shubh.Capstone.Microservice.Beans.User;
+import com.Shubh.Capstone.Microservice.Exception.UserNotFoundException;
 import com.Shubh.Capstone.Microservice.Payload.UserRequest;
 import com.Shubh.Capstone.Microservice.Payload.UserResponse;
 import com.Shubh.Capstone.Microservice.Service.UserService;
@@ -34,4 +35,28 @@ public class Controller {
                 .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).
                         body(new UserResponse(HttpStatus.NOT_FOUND, "User not found or failed to delete")));
 }
-}
+
+    @PutMapping("/updateUser/{id}")
+    public ResponseEntity<UserResponse> updateUser(@PathVariable Long id, @RequestBody UserRequest userRequest) {
+        try {
+            UserResponse userResponse = userService.updateUser(id, userRequest);
+            return ResponseEntity.ok().body(userResponse);
+        } catch (UserNotFoundException ex) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(new UserResponse(HttpStatus.NOT_FOUND, ex.getMessage()));
+        } catch (Exception ex) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(new UserResponse(HttpStatus.INTERNAL_SERVER_ERROR, "An unexpected error occurred"));
+        }
+    }
+        
+        
+        
+        
+    }
+
+
+
+
+
+

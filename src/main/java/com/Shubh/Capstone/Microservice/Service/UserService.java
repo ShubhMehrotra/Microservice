@@ -11,8 +11,8 @@ public interface UserService {
 
     public UserResponse addUser(UserRequest userRequest);
     public UserResponse deleteUserById (Long id);
-    public UserResponse updateUser(Long id,User user);
-    public List<User> searchUser();
+    public UserResponse updateUser(Long id, UserRequest userRequest);
+    public List<User> searchUsers();
     public User searchById(Long id);
 
 

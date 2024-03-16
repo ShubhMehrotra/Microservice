@@ -3,10 +3,13 @@ package com.Shubh.Capstone.Microservice.Service;
 import com.Shubh.Capstone.Microservice.Beans.Address;
 import com.Shubh.Capstone.Microservice.Beans.User;
 import com.Shubh.Capstone.Microservice.Exception.UserNotFoundException;
+import com.Shubh.Capstone.Microservice.Payload.AddressRequest;
 import com.Shubh.Capstone.Microservice.Payload.UserRequest;
 import com.Shubh.Capstone.Microservice.Payload.UserResponse;
 import com.Shubh.Capstone.Microservice.Repository.UserRepo;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
@@ -23,22 +26,17 @@ public class UserServiceImplementation implements UserService {
     @Override
     public UserResponse addUser(UserRequest userRequest) {
         User use=new User();
-        use.setUser_Name(userRequest.getUser_Name());
-        use.setUser_Email(userRequest.getUser_Email());
+        BeanUtils.copyProperties(userRequest,use);
         List<Address> addresses = new ArrayList<>();
-        if (userRequest.getAddresses() != null) {
-            for (Address addressRequest : userRequest.getAddresses()) {
+        if (userRequest.getUser_Email() != null) {
+            for (AddressRequest addressRequest : userRequest.getAddressRequests()) {
                 Address address = new Address();
-                address.setDoor_No(addressRequest.getDoor_No());
-                address.setStreet_Name(addressRequest.getStreet_Name());
-                address.setCity(addressRequest.getCity());
-                address.setPin_Code(addressRequest.getPin_Code());
+                BeanUtils.copyProperties(addressRequest,address);
                 addresses.add(address);
             }
         }
         use.setAddress(addresses);
         userRepo.save(use);
-
         return new UserResponse(HttpStatus.CREATED,"User Created Successfully");
     }
 
@@ -52,44 +50,50 @@ public class UserServiceImplementation implements UserService {
 
     }
 
-
-
     @Override
-    public UserResponse updateUser(Long id, User user) {
-        Optional<User> use=userRepo.findById(id);
-        if(use.isEmpty())
-            return new UserResponse(HttpStatus.NOT_FOUND, "User with this ID is not present in system");
+    public UserResponse updateUser(Long id, UserRequest userRequest) {
+        Optional<User> userOptional = userRepo.findById(id);
+        if (userOptional.isEmpty()) {
+            throw new UserNotFoundException(HttpStatus.NOT_FOUND,"User to be UPDATED with this ID not found in System");
+        }
+        User user = userOptional.get();
+        BeanUtils.copyProperties(userRequest,user);
+        if (userRequest.getAddressRequests() != null) {
+            List<Address> addresses = new ArrayList<>();
+            for (AddressRequest addressRequest : userRequest.getAddressRequests()) {
+                Address address = new Address();
+                BeanUtils.copyProperties(addressRequest, address);
+                addresses.add(address);
+            }
+            user.setAddress(addresses);
+        }
         User updatedUser = userRepo.save(user);
-        return new UserResponse(HttpStatus.OK,"User Updated-"+ updatedUser.getUser_Name());
-
+        return new UserResponse(HttpStatus.OK, "User with ID " + id + " updated successfully");
     }
 
+
+
+
+
+
+
     @Override
-    public List<User> searchUser() {
+    public List<User> searchUsers() {
         List<User> user=userRepo.findAll();
         if(user.isEmpty())
-            throw new UserNotFoundException("No Users found in System");
+            throw new UserNotFoundException(HttpStatus.NOT_FOUND,"No Users found in System");
         return  user;
     }
 
     @Override
     public User searchById(Long id) {
-        return userRepo
-                .findById(id)
-                .orElseThrow(()->  new UserNotFoundException("User not found for this id-" + id));
+        return userRepo.findById(id)
+                .orElseThrow(() -> new UserNotFoundException(HttpStatus.NOT_FOUND,"User not found for this id-" + id));
     }
 
-//    public void addAddressToUser(Long userId, Address address) {
-//        Optional<User> userOptional = userRepo.findById(userId);
-//        if (userOptional.isPresent()) {
-//            User user = userOptional.get();
-//            address.setUser(user);
-//            user.getAddress().add(address);
-//            userRepo.save(user);
-//        } else {
-//            throw new UserNotFoundException  ("User with ID " + userId + " not found.");
-//        }
-//    }
+
+
+
 
 }
 
