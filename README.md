@@ -13,7 +13,7 @@ This Application is simply demonstrating the one to many realtionship between th
 
 
 ## Pre Requisite /Installation
-* Any IDE Intellije or Eclipse 
+* Any IDE Intellije or Eclipse or STS
 * JDK 17 or above 
 * Postman or Swagger 
 * You can simply download the code as a zip and  or you can simply download the code by using ``` gh repo clone ShubhMehrotra/Microservice```
