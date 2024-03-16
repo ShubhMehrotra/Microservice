@@ -21,7 +21,7 @@ public class Controller {
     private UserService userService;
 
     @PostMapping("/addUser")
-    public ResponseEntity<UserResponse> addUser(@RequestBody @Valid UserRequest userRequest) {
+    public ResponseEntity<UserResponse> addUser(@Valid @RequestBody  UserRequest userRequest) {
         Optional<UserResponse>userResponse= Optional.ofNullable(userService.addUser(userRequest));
         return userResponse.map(response -> ResponseEntity.status(HttpStatus.CREATED)
                         .body(response)).
