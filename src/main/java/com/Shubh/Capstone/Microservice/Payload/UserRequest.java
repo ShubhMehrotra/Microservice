@@ -1,6 +1,7 @@
 package com.Shubh.Capstone.Microservice.Payload;
 
 import com.Shubh.Capstone.Microservice.Beans.Address;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -10,6 +11,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
+import java.util.Objects;
 
 @Data
 @Getter
@@ -22,5 +24,11 @@ public class UserRequest {
     @Email(message ="Use proper email address ")
     private String user_Email;
     @NotEmpty(message = "All fields are mandatory")
-    private List<AddressRequest> addressRequests;
+    private List<@Valid AddressRequest> addressRequests;
+
+    public boolean isValidAddressRequests() {
+        return addressRequests != null &&
+                addressRequests.stream().allMatch(Objects::nonNull) &&
+                addressRequests.stream().allMatch(AddressRequest::isValid);
+    }
 }
