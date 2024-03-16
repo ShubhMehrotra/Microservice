@@ -27,13 +27,13 @@ This Application is simply demonstrating the one to many realtionship between th
 
 
 ## This is the ER diagram 
-
+![image](https://github.com/ShubhMehrotra/Microservice/assets/60496852/9d424a11-af62-4b9d-92ad-ea2bc710dd61)
 
 ## Payload
 
 You can refer the following payload 
 
-{
+```{
 
   "user_Name":"Shubh Mehrotra",
   "user_Email":"User@gmail.com",
@@ -56,23 +56,4 @@ You can refer the following payload
   ]
 
 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-![image](https://github.com/ShubhMehrotra/Microservice/assets/60496852/9d424a11-af62-4b9d-92ad-ea2bc710dd61)
+}```
