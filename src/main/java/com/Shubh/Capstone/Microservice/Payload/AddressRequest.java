@@ -1,13 +1,12 @@
 package com.Shubh.Capstone.Microservice.Payload;
 
 import jakarta.validation.constraints.NotEmpty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 @Data
-
-
 public class AddressRequest {
 
     @NotEmpty(message = "Street door No cannot be empty")
