@@ -23,6 +23,10 @@ public class UserServiceImplementation implements UserService {
     @Autowired
    UserRepo userRepo;
 
+    public UserServiceImplementation(UserRepo userRepo) {
+        this.userRepo = userRepo;
+    }
+
     @Override
     public UserResponse addUser(UserRequest userRequest) {
         User use=new User();

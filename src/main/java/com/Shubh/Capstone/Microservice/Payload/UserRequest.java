@@ -14,8 +14,6 @@ import java.util.List;
 import java.util.Objects;
 
 @Data
-@Getter
-@Setter
 public class UserRequest {
 
     @NotEmpty(message = "UserName cannot be Empty")
