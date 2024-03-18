@@ -1,10 +1,8 @@
 package com.Shubh.Capstone.Microservice.Payload;
 
 import jakarta.validation.constraints.NotEmpty;
-import lombok.AllArgsConstructor;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 @Data
 public class AddressRequest {

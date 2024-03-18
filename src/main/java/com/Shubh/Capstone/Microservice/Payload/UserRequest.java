@@ -21,6 +21,7 @@ public class UserRequest {
     @Size(min = 4,message = "Username minimum must be of 4 characters")
     private String user_Name;
     @Email(message ="Use proper email address ")
+    @NotEmpty(message = "UserEmail cannot be Empty")
     private String user_Email;
     @NotEmpty(message = "All fields are mandatory")
     private List<@Valid AddressRequest> addressRequests;
