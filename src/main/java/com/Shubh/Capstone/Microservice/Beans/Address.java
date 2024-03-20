@@ -1,12 +1,12 @@
 package com.Shubh.Capstone.Microservice.Beans;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

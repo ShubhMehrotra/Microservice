@@ -2,9 +2,7 @@ package com.Shubh.Capstone.Microservice.Beans;
 
 import com.Shubh.Capstone.Microservice.Payload.AddressRequest;
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 
 import java.util.ArrayList;
@@ -12,6 +10,8 @@ import java.util.List;
 
 @Entity
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
     @Id
     @Column(name="user_Id")
