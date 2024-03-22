@@ -1,31 +1,42 @@
 package com.Shubh.Capstone.Microservice.Config;
 
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
 import org.springframework.security.config.web.server.ServerHttpSecurity;
+import org.springframework.security.core.userdetails.MapReactiveUserDetailsService;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.server.SecurityWebFilterChain;
+
+import static org.springframework.security.config.Customizer.withDefaults;
 
 @Configuration
 @EnableWebFluxSecurity
 public class SecurityConfig {
+
     @Bean
-    public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity serverHttpSecurity)
+    public MapReactiveUserDetailsService userDetailsService() {
+        UserDetails user = User.withDefaultPasswordEncoder()
+                .username("user")
+                .password("user")
+                .roles("USER")
+                .build();
+        return new MapReactiveUserDetailsService(user);
+    }
+    @Bean
+    public SecurityWebFilterChain sprSecurityWebFilterChain(ServerHttpSecurity serverHttpSecurity)
     {
-//          serverHttpSecurity
-//                  .authorizeExchange()
-//                  .anyExchange()
-//                  .authenticated()
-//                  .and()
-//                  .oauth2Client()
-//                  .and()
-//                  .oauth2ResourceServer()
-//                  .jwt();
-
-          return serverHttpSecurity.build();
-
+        serverHttpSecurity.authorizeExchange(exchanges -> exchanges
+            .anyExchange().authenticated()
+    )
+            .httpBasic(withDefaults())
+            .formLogin(withDefaults());
+        return serverHttpSecurity.build();
 
 
     }
+
 }
+
+

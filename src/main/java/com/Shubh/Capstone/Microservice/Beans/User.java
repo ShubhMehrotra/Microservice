@@ -22,7 +22,7 @@ public class User {
 
 
 
-    @OneToMany( cascade = CascadeType.ALL)
+    @OneToMany( cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinColumn(name="user_Id",nullable = false)
     private List<Address> Address = new ArrayList<>();;
 
