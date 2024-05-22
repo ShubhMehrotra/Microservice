@@ -1,10 +1,10 @@
-package com.shubh.product;
+package com.Shubh.JPARealtionship;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProductApplicationTests {
+class ApplicationTests {
 
 	@Test
 	void contextLoads() {
