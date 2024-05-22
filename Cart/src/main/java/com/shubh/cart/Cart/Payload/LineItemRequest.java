@@ -6,24 +6,20 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 public class LineItemRequest {
-//    @NotNull(message = "Item ID cannot be null")
-//    private Long itemId;
-    @NotNull(message = "Product ID cannot be null")
+
+
+    @NotNull(message = "ID cannot be Null")
     private Long productId;
-    @NotEmpty(message = "Product Name cannot be null")
+    @NotEmpty(message = "Name cannot be empty")
     private String productName;
     @NotNull(message ="Quantity cannot be null")
     private Long quantity;
-    @NotNull(message = "Price cannot be null")
+    @NotNull(message = "Price cannot be null ")
     private Long price;
-    public boolean isValid() {
-        return productName!=null && !productName.isEmpty()
-                && quantity!=null
-                && price!=null ;
-    }
+
 
 }
