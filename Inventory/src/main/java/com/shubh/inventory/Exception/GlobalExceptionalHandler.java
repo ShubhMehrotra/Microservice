@@ -1,4 +1,4 @@
-package com.shubh.product.Exception;
+package com.shubh.inventory.Exception;
 
 import com.shubh.product.Payload.ApiResponse;
 
