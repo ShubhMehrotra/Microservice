@@ -1,28 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <annotationProcessing>
-      <profile name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="JPARealtionship" />
-        <module name="ServiceRegistry" />
-        <module name="Customer" />
-        <module name="Inventory" />
-        <module name="ApiGateway" />
-        <module name="Cart" />
-      </profile>
-    </annotationProcessing>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="ApiGateway" options="-parameters" />
-      <module name="Cart" options="-parameters" />
-      <module name="Customer" options="-parameters" />
-      <module name="Inventory" options="-parameters" />
-      <module name="JPARealtionship" options="-parameters" />
-      <module name="ServiceRegistry" options="-parameters" />
-    </option>
+    <bytecodeTargetLevel>
+      <module name="ApiGateway" target="17" />
+      <module name="Cart" target="17" />
+      <module name="Customer" target="17" />
+      <module name="Inventory" target="17" />
+      <module name="JPARealtionship" target="22" />
+      <module name="ServiceRegistry" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
