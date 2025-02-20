@@ -5,28 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6fc37124-5fd9-4b5c-ae23-49f1235ccfb5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/kafka/CustomerConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/config/KafkaTopicConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/event/CustomerCreatedEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/kafka/CustomerProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OrderService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/OnlineStore.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cart/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Entity/CustomerCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Repository/CustomerCartRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/kafka/CartEventConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Entity/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Entity/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Payload/CartRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Payload/CartRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Service/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Service/CartServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cart/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer /pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Exception/GlobalExceptionalHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Exception/GlobalExceptionalHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Payload/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Payload/ApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Service/AddressServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Service/AddressServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/config/KafkaTopicConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/config/KafkaTopicConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/event/CustomerCreatedEvent.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Customer /src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Product/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +37,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -69,15 +70,18 @@
     "Application.CustomerApplication.executor": "Run",
     "Application.ServiceRegistryApplication.executor": "Run",
     "Application.java.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "Maven.ApiGateway [clean].executor": "Run",
     "Maven.ApiGateway [install].executor": "Run",
     "Maven.Cart [install].executor": "Run",
+    "Maven.Customer [clean].executor": "Run",
+    "Maven.Customer [install].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "SJ-Test",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/media/shubhmehrotra/JAVA/OnlineStore/OrderService",
+    "last_opened_file_path": "/media/shubhmehrotra/JAVA/API/Store/Microservice/Customer ",
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",

@@ -28,9 +28,9 @@ public class AddressServiceImpl implements AddressService {
                     Address address = new Address();
                     BeanUtils.copyProperties(addressRequest, address);
                     addressRepo.save(address);
-                    return new ApiResponse(HttpStatus.CREATED, "Address added Successfully");
+                    return new ApiResponse(HttpStatus.CREATED, "Address added Successfully",null);
                 })
-                .orElse(new ApiResponse(HttpStatus.BAD_REQUEST, "Address failed to get added"));
+                .orElse(new ApiResponse(HttpStatus.BAD_REQUEST, "Address failed to get added",null));
     }
 
     @Override
@@ -38,9 +38,9 @@ public class AddressServiceImpl implements AddressService {
         return addressRepo.findById(id)
                 .map(address -> {
                     addressRepo.deleteById(id);
-                    return new ApiResponse(HttpStatus.OK, "Address deleted Successfully");
+                    return new ApiResponse(HttpStatus.OK, "Address deleted Successfully",null);
                 })
-                .orElse(new ApiResponse(HttpStatus.NOT_FOUND, "Address with id:" + id + "Not exist in the system"));
+                .orElse(new ApiResponse(HttpStatus.NOT_FOUND, "Address with id:" + id + "Not exist in the system",null));
 
     }
 
@@ -51,9 +51,9 @@ public class AddressServiceImpl implements AddressService {
                     Address address1 = new Address();
                     BeanUtils.copyProperties(addressRequest, address1);
                     addressRepo.save(address1);
-                    return new ApiResponse(HttpStatus.CREATED, "Address Updated Successfully");
+                    return new ApiResponse(HttpStatus.CREATED, "Address Updated Successfully",null);
                 })
-                .orElse(new ApiResponse(HttpStatus.NOT_FOUND, "Address with id:" + id + "Not exist in the system"));
+                .orElse(new ApiResponse(HttpStatus.NOT_FOUND, "Address with id:" + id + "Not exist in the system",null));
 
     }
 

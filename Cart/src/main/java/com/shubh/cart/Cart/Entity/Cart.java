@@ -14,10 +14,11 @@ import java.util.List;
 public class Cart {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long cartId;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true)
     @JoinColumn(name="cartId")
     private List<LineItem> lineItems;
+
 
 }

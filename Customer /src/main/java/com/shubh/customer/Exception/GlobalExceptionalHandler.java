@@ -18,7 +18,7 @@ public class GlobalExceptionalHandler {
     @ExceptionHandler(UserNotFoundException.class)
     public ApiResponse handleUserNotFoundException(UserNotFoundException userNotFoundException)
     {
-        return new ApiResponse (HttpStatus.NOT_FOUND,userNotFoundException.getMessage());
+        return new ApiResponse (HttpStatus.NOT_FOUND,userNotFoundException.getMessage(),null);
 
     }
 
@@ -26,7 +26,7 @@ public class GlobalExceptionalHandler {
     public ApiResponse handleAddressNotFoundException(AddressNotFoundException addressNotFoundException)
     {
 
-        return  new ApiResponse(HttpStatus.NOT_FOUND,addressNotFoundException.getMessage());
+        return  new ApiResponse(HttpStatus.NOT_FOUND,addressNotFoundException.getMessage(),null);
     }
 
 

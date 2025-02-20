@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <directory url="file://$PROJECT_DIR$/Shipping/Composite/src/main/resources/archetype-resources" includeSubdirectories="true" />
+    </excludeFromCompile>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -9,13 +12,27 @@
         <outputRelativeToContentRoot value="true" />
         <module name="JPARealtionship" />
         <module name="Customer" />
+        <module name="Product" />
         <module name="JPARealtionship (1)" />
         <module name="ServiceRegistry" />
+        <module name="OrderService" />
         <module name="ApiGateway" />
         <module name="Inventory" />
         <module name="Cart" />
       </profile>
+      <profile name="Annotation profile for Shipping" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-configuration-processor/3.5.0-M1/spring-boot-configuration-processor-3.5.0-M1.jar" />
+        </processorPath>
+        <module name="Shipping" />
+      </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Composite" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -25,7 +42,10 @@
       <module name="Inventory" options="-parameters" />
       <module name="JPARealtionship" options="-parameters" />
       <module name="JPARealtionship (1)" options="-parameters" />
+      <module name="OrderService" options="-parameters" />
+      <module name="Product" options="-parameters" />
       <module name="ServiceRegistry" options="-parameters" />
+      <module name="Shipping" options="-parameters" />
     </option>
   </component>
 </project>
