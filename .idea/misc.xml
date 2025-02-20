@@ -6,11 +6,13 @@
       <list>
         <option value="$PROJECT_DIR$/ApiGateway/pom.xml" />
         <option value="$PROJECT_DIR$/ServiceRegistry/pom.xml" />
-        <option value="$PROJECT_DIR$/Customer /pom.xml" />
         <option value="$PROJECT_DIR$/Cart/pom.xml" />
         <option value="$PROJECT_DIR$/Inventory/pom.xml" />
         <option value="$PROJECT_DIR$/Product/pom.xml" />
         <option value="$PROJECT_DIR$/OrderService/pom.xml" />
+        <option value="$PROJECT_DIR$/Shipping/Composite/pom.xml" />
+        <option value="$PROJECT_DIR$/Shipping /pom.xml" />
+        <option value="$PROJECT_DIR$/Customer /pom.xml" />
       </list>
     </option>
   </component>

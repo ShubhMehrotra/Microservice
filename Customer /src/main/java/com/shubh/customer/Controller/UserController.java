@@ -1,52 +1,46 @@
 package com.shubh.customer.Controller;
-import com.shubh.customer.Entity.User;
+
 import com.shubh.customer.Payload.ApiResponse;
+import com.shubh.customer.Payload.UserRequest;
 import com.shubh.customer.Payload.UserRequest;
 import com.shubh.customer.Service.UserServiceImpl;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
-
 @Validated
 @RestController
-@RequestMapping ("/user")
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
     private UserServiceImpl userService;
 
     @PostMapping("/addUser")
-    public ResponseEntity<ApiResponse> addUser(@Valid @RequestBody UserRequest userRequest)
-    {
-        return ResponseEntity.of(Optional.ofNullable(userService.addUser(userRequest)));
+    public ResponseEntity<ApiResponse> addUser(@Valid @RequestBody UserRequest userRequest) {
+        Long userId = userService.addUser(userRequest);
+        ApiResponse response = new ApiResponse(HttpStatus.CREATED, "User created successfully", userId);
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
-    @DeleteMapping("/deleteUser/{id}")
-    public ResponseEntity<ApiResponse> deleteUser(@PathVariable Long id)
-    {
-        return ResponseEntity.of(Optional.ofNullable(userService.deleteUserById(id)));
 
+    @DeleteMapping("/deleteUser/{id}")
+    public ResponseEntity<ApiResponse> deleteUser(@PathVariable Long id) {
+        ApiResponse response = userService.deleteUserById(id);
+        return ResponseEntity.ok(response);
     }
 
     @PutMapping("/updateUser/{id}")
-    public ResponseEntity<ApiResponse> updateUser(@PathVariable Long id, @Valid @RequestBody UserRequest userRequest)
-    {
-        return  ResponseEntity.of(Optional.ofNullable(userService.updateUser(id, userRequest)));
-
+    public ResponseEntity<ApiResponse> updateUser(@PathVariable Long id, @Valid @RequestBody UserRequest userRequest) {
+        ApiResponse response = userService.updateUser(id, userRequest);
+        return ResponseEntity.ok(response);
     }
 
     @GetMapping("/getUser/{id}")
-    public ResponseEntity<User> getUserById(@PathVariable Long id)
-    {
-
-        return ResponseEntity.of(Optional.ofNullable(userService.getUserById(id)));
+    public ResponseEntity<UserRequest> getUserById(@PathVariable Long id) {
+        UserRequest userResponse = userService.getUserById(id);
+        return ResponseEntity.ok(userResponse);
     }
-
-
-
-
-
 }
