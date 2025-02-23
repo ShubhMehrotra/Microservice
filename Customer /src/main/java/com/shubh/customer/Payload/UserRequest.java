@@ -13,6 +13,8 @@ import java.util.Objects;
 @NoArgsConstructor
 public class UserRequest {
 
+    private Long userId;
+
     @NotEmpty(message = "UserName cannot be Empty")
     @Size(min = 4,message = "Username minimum must be of 4 characters")
     private String userName;
@@ -22,9 +24,5 @@ public class UserRequest {
     @NotEmpty(message = "All fields are mandatory")
     private List<@Valid AddressRequest> addressRequests;
 
-    public boolean isValidAddressRequests() {
-        return addressRequests != null &&
-                addressRequests.stream().allMatch(Objects::nonNull) &&
-                addressRequests.stream().allMatch(AddressRequest::isValid);
-    }
+
 }

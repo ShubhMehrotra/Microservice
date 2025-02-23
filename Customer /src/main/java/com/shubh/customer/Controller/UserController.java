@@ -4,6 +4,7 @@ import com.shubh.customer.Payload.ApiResponse;
 import com.shubh.customer.Payload.UserRequest;
 import com.shubh.customer.Payload.UserRequest;
 import com.shubh.customer.Service.UserServiceImpl;
+import com.shubh.customer.dto.CustomerDto;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -39,8 +40,8 @@ public class UserController {
     }
 
     @GetMapping("/getUser/{id}")
-    public ResponseEntity<UserRequest> getUserById(@PathVariable Long id) {
-        UserRequest userResponse = userService.getUserById(id);
+    public ResponseEntity<CustomerDto> getUserById(@PathVariable Long id) {
+        CustomerDto userResponse = userService.getUserById(id);
         return ResponseEntity.ok(userResponse);
     }
 }

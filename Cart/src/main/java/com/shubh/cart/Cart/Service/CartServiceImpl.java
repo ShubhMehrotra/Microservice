@@ -5,6 +5,7 @@ import com.shubh.cart.Cart.Entity.CustomerCart;
 import com.shubh.cart.Cart.Entity.LineItem;
 import com.shubh.cart.Cart.Payload.ApiResponse;
 import com.shubh.cart.Cart.Payload.CartRequest;
+import com.shubh.cart.Cart.Payload.CustomerCartDto;
 import com.shubh.cart.Cart.Payload.LineItemRequest;
 import com.shubh.cart.Cart.Repository.CartRepo;
 import com.shubh.cart.Cart.Repository.CustomerCartRepo;
@@ -26,26 +27,33 @@ public class CartServiceImpl implements CartService {
 
     @Autowired
     private CustomerCartRepo customerCartRepo;
-
     @Override
-    public ApiResponse addCart(CartRequest cartRequest) {
-        if (cartRequest == null || cartRequest.getCustomerId() == null) {
+    public ApiResponse addCart(CustomerCartDto customerCartDto) {
+        if (customerCartDto == null || customerCartDto.getCustomerId() == null) {
             return new ApiResponse(HttpStatus.BAD_REQUEST, "Cart request or Customer ID is null");
         }
 
-        //  Create an empty cart
+        // ✅ Check if a cart already exists for the customer
+        CustomerCart existingCustomerCart = customerCartRepo.findByCustomerId(customerCartDto.getCustomerId());
+        if (existingCustomerCart != null) {
+            return new ApiResponse(HttpStatus.CONFLICT, "Cart already exists for this customer");
+        }
+
+        // ✅ Create an empty cart only if it doesn't exist
         Cart cart = new Cart();
-        cart.setLineItems(convertToLineItems(cartRequest.getLineItemRequest()));
+        cart.setLineItems(new ArrayList<>());
         Cart savedCart = cartRepo.save(cart);
 
-        //  Store customerId and cartId in `CustomerCart`
         CustomerCart customerCart = new CustomerCart();
-        customerCart.setCustomerId(cartRequest.getCustomerId());
+        customerCart.setCustomerId(customerCartDto.getCustomerId());
         customerCart.setCart(savedCart);
         customerCartRepo.save(customerCart);
 
         return new ApiResponse(HttpStatus.CREATED, "Cart Created Successfully");
     }
+
+
+
 
     @Override
     public ApiResponse deleteCart(Long id) {
@@ -71,11 +79,16 @@ public class CartServiceImpl implements CartService {
     }
 
     @Override
-    public Cart getCart(Long customerId) {
-        return Optional.ofNullable(customerCartRepo.findByCustomerId(customerId))
-                .map(CustomerCart::getCart)
-                .orElseThrow(() -> new CartNotFoundException("No cart found for Customer ID: " + customerId));
+    public CustomerCart getCustomerCart(Long customerId) {
+        CustomerCart customerCart = customerCartRepo.findByCustomerId(customerId);
+
+        if (customerCart == null) {
+            throw new CartNotFoundException("No cart found for Customer ID: " + customerId);
+        }
+
+        return customerCart;
     }
+
 
     private List<LineItem> convertToLineItems(List<LineItemRequest> lineItemRequests) {
         List<LineItem> lineItems = new ArrayList<>();

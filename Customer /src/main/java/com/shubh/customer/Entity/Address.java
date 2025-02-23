@@ -17,10 +17,10 @@ public class Address {
 
 
 	private Long address_Id;
-	private String door_No;
-	private String street_Name;
+	private String doorNo;
+	private String streetName;
 	private String city;
-	private String pin_Code;
+	private String pinCode;
 
 }
 

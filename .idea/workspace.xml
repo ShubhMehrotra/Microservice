@@ -4,28 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fc37124-5fd9-4b5c-ae23-49f1235ccfb5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Entity/CustomerCart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Repository/CustomerCartRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/kafka/CartEventConsumer.java" afterDir="false" />
+    <list default="true" id="d0aba273-8de1-4052-8a86-c1b25ce1e77a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Payload/CustomerCartDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/dto/CustomerDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/Client/CartClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/Client/CustomerClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/Controller/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/Dto/AddressDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/Dto/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/Dto/CartDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/Dto/CustomerCartDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/Dto/CustomerDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/Dto/LineItemDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/Dto/UserCartResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/service/ShippingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/service/ShippingServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cart/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Entity/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Entity/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Payload/CartRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Payload/CartRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Payload/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Payload/ApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Service/CartService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Service/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Service/CartServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cart/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer /pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Exception/GlobalExceptionalHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Exception/GlobalExceptionalHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Payload/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Payload/ApiResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Service/AddressServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Service/AddressServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Entity/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Entity/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Payload/AddressRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Payload/AddressRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Payload/UserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Payload/UserRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/config/KafkaTopicConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/config/KafkaTopicConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/event/CustomerCreatedEvent.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Customer /src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,70 +51,39 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="2tA7QJtTkHgJjtBEfAC8cRJq7kv" />
+  <component name="ProjectId" id="2tMt0Ujh2XcFAvjV5zW8Zgqmml0" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.ApiGatewayApplication.executor": "Run",
     "Application.CartApplication.executor": "Run",
     "Application.CustomerApplication.executor": "Run",
     "Application.ServiceRegistryApplication.executor": "Run",
-    "Application.java.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "Maven.ApiGateway [clean].executor": "Run",
-    "Maven.ApiGateway [install].executor": "Run",
-    "Maven.Cart [install].executor": "Run",
+    "Application.ShippingApplication.executor": "Run",
+    "Maven.Cart [clean].executor": "Run",
     "Maven.Customer [clean].executor": "Run",
-    "Maven.Customer [install].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Maven.Shipping [clean].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "SJ-Test",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/media/shubhmehrotra/JAVA/API/Store/Microservice/Customer ",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+    "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/OrderService" />
-      <recent name="$PROJECT_DIR$/Microservice/OrderService" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Microservice/OrderService" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.CustomerApplication">
+  <component name="RunManager" selected="Application.ShippingApplication">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-23" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.shubh.gateway.ApiGatewayApplication" />
       <module name="ApiGateway" />
       <extension name="coverage">
@@ -152,18 +135,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <module name="OnlineStore" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="java" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src/main/java/com/shubh/gateway/ApiGatewayApplication.java" />
-      <module name="OnlineStore" />
+    <configuration name="ShippingApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Shubh.Shipping.Shipping.ShippingApplication" />
+      <module name="Shipping" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shubh.gateway.*" />
+          <option name="PATTERN" value="com.Shubh.Shipping.Shipping.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -171,71 +148,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ApiGateway [install]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="cmdOptions" />
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="install" />
-              </list>
-            </option>
-            <option name="multimoduleDir" />
-            <option name="pomFileName" value="pom.xml" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="projectsCmdOptionValues">
-              <list />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$/Microservice/ApiGateway" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Application.java" />
-      <item itemvalue="Application.ApiGatewayApplication" />
-      <item itemvalue="Application.CartApplication" />
-      <item itemvalue="Application.CustomerApplication" />
-      <item itemvalue="Application.ServiceRegistryApplication" />
-      <item itemvalue="Maven.ApiGateway [install]" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CustomerApplication" />
+        <item itemvalue="Application.ShippingApplication" />
         <item itemvalue="Application.CartApplication" />
+        <item itemvalue="Application.CustomerApplication" />
         <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.ServiceRegistryApplication" />
-        <item itemvalue="Maven.ApiGateway [install]" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6fc37124-5fd9-4b5c-ae23-49f1235ccfb5" name="Changes" comment="" />
-      <created>1739783007636</created>
+      <changelist id="d0aba273-8de1-4052-8a86-c1b25ce1e77a" name="Changes" comment="" />
+      <created>1740173549801</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1739783007636</updated>
+      <updated>1740173549801</updated>
     </task>
     <servers />
   </component>
