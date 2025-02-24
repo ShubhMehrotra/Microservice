@@ -8,10 +8,7 @@ pipeline {
     }
     agent any
 
-    environment {
-        DOCKER_CREDENTIALS_ID ='DOCKER_CREDENTIALS'
 
-    }
 
     stages {
         stage('Clean Workspace') {
@@ -41,7 +38,7 @@ pipeline {
         stage('Build and Push ServiceRegistry'){
             steps {
                 script {
-                    withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                    withCredentials([usernamePassword(credentialsId: 'DOCKER_CREDENTIALS', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
                         sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
 }
 
