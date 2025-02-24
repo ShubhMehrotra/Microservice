@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.shubh.customer</groupId>
-	<artifactId>Customer </artifactId>
+	<artifactId>Customer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>Customer </name>
+	<name>Customer</name>
 	<description>This project is implementing Customer Microservice</description>
 	<properties>
 		<java.version>17</java.version>

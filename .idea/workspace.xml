@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d0aba273-8de1-4052-8a86-c1b25ce1e77a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer /pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,24 +33,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CartApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CustomerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ServiceRegistryApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ShippingApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.ApiGateway [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Cart [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Customer [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.ServiceRegistry [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Shipping [clean].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;SJ-Test&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ApiGatewayApplication.executor": "Run",
+    "Application.CartApplication.executor": "Run",
+    "Application.CustomerApplication.executor": "Run",
+    "Application.ServiceRegistryApplication.executor": "Run",
+    "Application.ShippingApplication.executor": "Run",
+    "Maven.ApiGateway [clean].executor": "Run",
+    "Maven.Cart [clean].executor": "Run",
+    "Maven.Customer [clean].executor": "Run",
+    "Maven.ServiceRegistry [clean].executor": "Run",
+    "Maven.Shipping [clean].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "SJ-Test",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.ShippingApplication">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.shubh.gateway.ApiGatewayApplication" />
