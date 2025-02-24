@@ -34,7 +34,7 @@ pipeline {
             steps {
                 script {
                     echo 'Starting Kafka and Zookeeper...'
-                    sh 'docker-compose up -d'
+                    sh 'docker compose up -d'
                 }
             }
         }
