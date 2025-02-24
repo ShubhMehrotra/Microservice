@@ -33,8 +33,14 @@ pipeline {
         stage('Start Kafka & Zookeeper') {
             steps {
                 script {
+                    echo 'Stopping any running containers...'
+                    sh 'docker compose down || true'
                     echo 'Starting Kafka and Zookeeper...'
                     sh 'docker compose up -d'
+
+
+
+
                 }
             }
         }
