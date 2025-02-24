@@ -5,42 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0aba273-8de1-4052-8a86-c1b25ce1e77a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Payload/CustomerCartDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/dto/CustomerDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/Client/CartClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/Client/CustomerClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/Controller/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/Dto/AddressDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/Dto/ApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/Dto/CartDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/Dto/CustomerCartDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/Dto/CustomerDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/Dto/LineItemDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/Dto/UserCartResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/service/ShippingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shipping/src/main/java/com/Shubh/Shipping/Shipping/service/ShippingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ServiceRegistry/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cart/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Payload/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Payload/ApiResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Service/CartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Service/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/src/main/java/com/shubh/cart/Cart/Service/CartServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cart/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer /pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Entity/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Entity/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Payload/AddressRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Payload/AddressRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Payload/UserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Payload/UserRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/java/com/shubh/customer/Service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer /src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Customer /src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServiceRegistry/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceRegistry/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +43,7 @@
     "Application.ShippingApplication.executor": "Run",
     "Maven.Cart [clean].executor": "Run",
     "Maven.Customer [clean].executor": "Run",
+    "Maven.ServiceRegistry [clean].executor": "Run",
     "Maven.Shipping [clean].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
