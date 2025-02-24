@@ -9,7 +9,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_REGISTRY = 'your-docker-hub-username'
+        DOCKER_REGISTRY = 'shubhmehrotra'
     }
 
     stages {
@@ -104,7 +104,7 @@ pipeline {
             steps {
                 script {
                     echo 'Deploying all services...'
-                    sh 'docker-compose up -d'
+                    sh 'docker compose up -d'
                 }
             }
         }
