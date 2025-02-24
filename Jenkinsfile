@@ -8,6 +8,11 @@ pipeline {
     }
     agent any
 
+    environment {
+        DOCKER_CREDENTIALS_ID ='DOCKER_CREDENTIALS'
+
+    }
+
     stages {
         stage('Clean Workspace') {
             steps {
@@ -36,10 +41,10 @@ pipeline {
         stage('Build and Push ServiceRegistry'){
             steps {
                 script {
-                    withCredentials([usernamePassword(credentialsId: 'DOCKER_CREDENTIALS', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
-                        sh "echo \$DOCKER_PASS | docker login -u \$DOCKER_USER --password-stdin"
-                        sh "docker build -t \$DOCKER_USER/serviceregistry:latest ."
-                        sh "docker push \$DOCKER_USER/serviceregistry:latest"
+                    withCredentials([usernamePassword(credentialsId: "${DOCKER_CREDENTIALS_ID}", usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                        sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
+                    }
+                }
                 }
             }
         }
@@ -50,6 +55,6 @@ pipeline {
 
 
 
-    }
-}
+
+
 
