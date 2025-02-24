@@ -11,6 +11,7 @@
 	<groupId>com.shubh.gateway</groupId>
 	<artifactId>ApiGateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>ApiGateway</name>
 	<description>This project is implementing of Api Gateway</description>
 	<properties>
@@ -76,6 +77,7 @@
 	</dependencyManagement>
 
 	<build>
+		<finalName>ApiGateway</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

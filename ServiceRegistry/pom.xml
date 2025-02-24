@@ -11,6 +11,7 @@
 	<groupId>com.shubh.ServiceRegistry</groupId>
 	<artifactId>ServiceRegistry</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>ServiceRegistry</name>
 	<description>This project is implementing Service Registry</description>
 	<properties>
@@ -50,6 +51,7 @@
 	</dependencyManagement>
 
 	<build>
+		<finalName>ServiceRegistry</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
