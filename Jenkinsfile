@@ -11,7 +11,6 @@ pipeline {
     stages {
         stage('Clean Workspace') {
             steps {
-                ansiColor('xterm')
                 cleanWs()
                 echo 'Cleaning Workspace...'
                 echo 'Building a New Online Store'
