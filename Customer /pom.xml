@@ -11,6 +11,7 @@
 	<groupId>com.shubh.customer</groupId>
 	<artifactId>Customer </artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>Customer </name>
 	<description>This project is implementing Customer Microservice</description>
 	<properties>
@@ -46,10 +47,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/jakarta.validation/jakarta.validation-api -->
 		<dependency>
 			<groupId>jakarta.validation</groupId>
@@ -79,11 +77,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>com.shubh.customer</groupId>
-			<artifactId>Customer</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 
 
 	</dependencies>
@@ -100,6 +93,7 @@
 	</dependencyManagement>
 
 	<build>
+		<finalName>Customer</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

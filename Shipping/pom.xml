@@ -12,6 +12,7 @@
 	<artifactId>Shipping</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Shipping</name>
+	<packaging>jar</packaging>
 	<description>Spring project for composite microservice</description>
 	<url/>
 	<licenses>
@@ -76,6 +77,7 @@
 	</dependencyManagement>
 
 	<build>
+		<finalName>Shipping</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

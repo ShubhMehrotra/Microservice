@@ -11,6 +11,7 @@
 	<groupId>com.shubh.cart</groupId>
 	<artifactId>Cart</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>Cart</name>
 	<description>This project is implementing Cart Service</description>
 	<properties>
@@ -75,10 +76,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>com.shubh.customer</groupId>
-			<artifactId>Customer</artifactId>
-		</dependency>
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
@@ -90,15 +88,12 @@
 				<scope>import</scope>
 			</dependency>
 
-			<dependency>
-				<groupId>com.shubh.customer</groupId>
-				<artifactId>Customer</artifactId>
-				<version>0.0.1-SNAPSHOT</version>
-			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 
 	<build>
+		<finalName>Cart</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
